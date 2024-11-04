@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HomePage</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HomePage.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="headerr container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="py-2">
+                            <img src="~/Images/logo-white.webp" class="logo" />
+                        </div>
+                    </div>
+                    <div class="col-lg-9 my-auto">
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse m-1" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="webDesignDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                             Web Design
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="webDesignDropdown">
+                                            <li><a class="dropdown-item" href="#">Standered website</a></li>
+                                            <li><a class="dropdown-item" href="#">E-Commerece website</a></li>
+                                            <li><a class="dropdown-item" href="#">Booking website</a></li>
+                                            <li><a class="dropdown-item" href="#">Catalog website</a></li>
+                                            <li><a class="dropdown-item" href="#">Wordpress website</a></li>
+                                            <li><a class="dropdown-item" href="#">Logo Design</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">SEO</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Content Writing</a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="marketingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Marketing
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="marketingDropdown">
+                                            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                                            <li><a class="dropdown-item" href="#">Social media Marketing</a></li>
+                                            <li><a class="dropdown-item" href="#">Google Ads Management</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Our Work</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Web Hosting</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+
+    <div class="container-fluid bgfoot footer text-white">
+        <div class="container">
+            <div class="row">
+                <h6 class="text-center py-1">Copyright &commat;  2023. All rights reserved.</h6>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
